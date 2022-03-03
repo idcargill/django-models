@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="/">Home</a>
+  <dl>
+    <dt><h4 style="text-transform: uppercase">{{ snack_details.name }}</h4></dt>
+    <dd><b>Purchaser: </b>{{snack_details.purchaser}}</dd>
+    <dd><b>Description:</b> {{ snack_details.description }}</dd>
+
+  </dl>
+
+
+{% endblock content %}

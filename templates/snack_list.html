@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h1>Snack List</h1>
+  {% for snack in object_list %}
+    <dl>
+      <dt>
+        <a
+          style="text-transform: capitalize"
+          href="{% url 'snack_details' snack.pk %}"
+        >
+          {{snack.name}}
+        </a>
+      </dt>
+      <dd>{{snack.description}}</dd>
+    </dl>
+  {% endfor %}
+
+{% endblock content %}
